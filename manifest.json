@@ -1,0 +1,32 @@
+{
+  "name": "AmazeBot",
+  "version": "1.0",
+  "manifest_version": 2,
+ 
+  "description": "Amazon Buy Bot, enter your cvv and start the bot on the page, if will take you to the OTP screen",  
+  "icons" : { 
+    "16": "images/refresh-icon16.png",
+    "48": "images/refresh-icon48.png",
+    "128": "images/refresh-icon128.png" 
+  },
+
+  "content_scripts": [
+    {
+      "matches": [ "*://*/*"],
+      "run_at": "document_start",
+      "js":["jquery.js", "constants.js", "content.js"]
+    }
+  ],
+  
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "images/refresh-icon.png"
+  },
+
+  "background": {
+    "scripts": ["constants.js", "background.js"],
+    "persistent": true
+  },
+
+  "permissions": [ "storage", "tabs",  "*://*/*", "alarms"]
+}

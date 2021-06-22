@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+  	<title>AmazonBot</title>  
+  </head>
+  <body>
+    <div id="d1">
+      <button id="ss_button">Start</button>
+    </div>
+    <div id="d2">
+      <form>
+        <label>CVV<input id="input-min" type="string" value='000'></label>
+        <label>Refresh<input id="input-sec" type="number" value=0 min=5 max=59></label>
+      </form>
+    </div>
+    This bot helps you buy any product from amazon as soon as it is available.
+    You'll just have to start this bot while on the amazon product page and the
+    AmazonBot will start checking every 30 seconds(default) and as soon as the 
+    product is available , the Bot will add to the card,
+    will select the first delivery address and take you to the payment screen.
+    if the payment screen has your Credit Card as the first option and you enter 
+    CVV when starting the bot. The bot will enter the CVV and take you to the page
+    where you can enter your OTP.
+  </body>
+  <script src="constants.js"></script>
+  <script src="popup.js"></script>
+</html>
+<!-- MAKE THIS ROBUST WITH ALTERNATIVE INFO FOR READERS N SUCH -->
